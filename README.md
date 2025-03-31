@@ -23,12 +23,12 @@ OS: MacOS 15.3.2
     * The text and other state updates
 
 * Assuming: the tabs on top bar all contain separate pages, which aren't made
-* Assuming: the bottom buttons are actions, and first one is the quick sales link button
+* Assuming: the bottom buttons are actions, and first one is the quick sales link button, rest of the buttons do no action.
 * Assuming: the caption is in a specific format:
     * First part is just a hook with a body
     * Second is the hashtags
     * Third contains various links and redirections.
-* Assuming: I can use any matching font, Oriflame Sans 2.0 isn't available anywhere.
+* Assuming: I can use any matching font, Oriflame Sans 2.0 isn't available anywhere. I have used poppins.
 
 * Improvements: Proper state handling
 * Improvements: Animations

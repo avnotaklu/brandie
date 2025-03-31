@@ -1,16 +1,12 @@
 import 'dart:ui';
 
 import 'package:brandie/constants.dart';
-import 'package:brandie/edit_caption_page.dart';
+import 'package:brandie/pages/edit_caption_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ContentScreen extends StatefulWidget {
-  // final String image;
-  // final String content;
-  // final SongAndArtist songAndArtist;
-
-  // const ContentScreen({super.key, required this.image, required this.content, required this.songAndArtist});
+  const ContentScreen({super.key});
 
   @override
   State<ContentScreen> createState() => _ContentScreenState();
@@ -90,7 +86,7 @@ class _ContentScreenState extends State<ContentScreen> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 44,
                       child: CircleAvatar(
                         backgroundImage: AssetImage('assets/images/girl.png'),
@@ -114,7 +110,7 @@ class _ContentScreenState extends State<ContentScreen> {
                           height: 20,
                           child: Row(
                             children: [
-                              Container(
+                              SizedBox(
                                 height: 16,
                                 child: Image.asset(
                                   'assets/images/brandie_stars.png',
@@ -144,7 +140,7 @@ class _ContentScreenState extends State<ContentScreen> {
                       padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       child: Container(
                         child: Text(
-                          'Pick ${_currentPage} of 3',
+                          'Pick $_currentPage of 3',
                           style: Theme.of(context).textTheme.labelMedium
                               ?.copyWith(color: Colors.white),
                         ),
@@ -231,7 +227,7 @@ class _ContentScreenState extends State<ContentScreen> {
                       ).textTheme.labelLarge?.copyWith(color: Colors.white),
                     ),
                     Expanded(
-                      child: Container(
+                      child: SizedBox(
                         height: 32,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
@@ -332,7 +328,7 @@ class CaptionView extends StatelessWidget {
           ),
 
           TextSpan(
-            text: hashtag.join(" ") + "\n",
+            text: "${hashtag.join(" ")}\n",
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontWeight: FontWeight.bold,
               color: Colors.white,
