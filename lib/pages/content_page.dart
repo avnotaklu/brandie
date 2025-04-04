@@ -51,7 +51,7 @@ class _ContentScreenState extends State<ContentScreen> {
               (con, i) => Image.asset(contentImages[i], fit: BoxFit.fill),
         ),
         Positioned(
-          top: h * 0.3,
+          top: h * 0.2,
           right: 8,
           child: BlurContainer(
             padding: EdgeInsets.symmetric(horizontal: 4, vertical: 8),
